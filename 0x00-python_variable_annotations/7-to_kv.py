@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-from typing import List, Union
+"""
+This module provides a function for creating a
+    tuple or a square of input and types it
+"""
+from typing import Union, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> tuple[str, float]:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """
-    Convert a string-key and int/float-value pair to a tuple.
+    This function creates a
+    tuple or a square of input and types it
 
-    Args:
-        k (str): The string key.
-        v (Union[int, float]): The integer or float value.
+    Parameters:
+    k (str): The string to include in the tuple.
+    v (Union[int, float]): The int or float to square.
 
     Returns:
-        Tuple[str, float]: A tuple where the first element
-        and the second element is the square of the int/float value 'v'.
+    Tuple[str, float]: A tuple with the string k and the square of v as a
+        float.
     """
-
-    return k, v ** 2.0
+    return (k, float(v ** 2))
