@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-from typing import List, Tuple
+"""
+This module provides a function for finding the length of each
+    element in a list of strings and types it
+"""
+from typing import Iterable, List, Sequence, Tuple
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
-    Calculate the length of each element in the input list.
+    This function takes a list of strings and returns a list of input tuples,
+        where each tuple contains a string
 
-    Args:
-        lst (List[str]): The input list of strings.
+    Parameters:
+    lst (List[str]): The list of strings to parse
 
     Returns:
-        List[Tuple[str, int]]: A list of tuples where each tuple contains
-        an element from the input list along with its length.
-
-    Example:
-        >>> element_length(['apple', 'banana', 'orange'])
-        [('apple', 5), ('banana', 6), ('orange', 6)]
+    List[Tuple[str, int]]: A list of input tuples, where each tuple contains
+        a string and the length of that string.
     """
     return [(i, len(i)) for i in lst]
